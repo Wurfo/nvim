@@ -1,0 +1,6 @@
+*/.DS_Store
+*/.cache/
+*/.git/
+*.swp
+*.swo
+*/packer_compiled.lua
