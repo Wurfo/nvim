@@ -4,7 +4,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("gorgoroth")
+			vim.cmd.colorscheme("lackluster-hack")
 		end,
 	},
 	{
