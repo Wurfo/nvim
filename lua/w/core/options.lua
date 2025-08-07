@@ -3,12 +3,12 @@ vim.g.mapleader = " " -- set leader key properly
 -- Make cursor blink and be a bar
 vim.opt.guicursor = "n-v-c-sm-i-ci-ve:block-blinkwait1000-blinkon500-blinkoff500"
 
-vim.cmd.colorscheme("custom")
+vim.cmd.colorscheme("makurai_autumn")
 
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 6
