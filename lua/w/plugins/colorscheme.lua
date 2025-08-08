@@ -15,6 +15,16 @@ return {
 	},
 	{
 		"Skardyy/makurai-nvim",
+		config = function()
+			-- you don't have to call setup
+			require("makurai").setup({
+				transparent = false, -- removes the bg color
+				bordered = false, -- removes the bg color from floats/popups
+				increase_contrast = false, -- only changes the line number and active line number for now.
+			})
+
+			-- vim.cmd.colorscheme("gruber-darker")
+		end,
 	},
 	{
 		"blazkowolf/gruber-darker.nvim",
@@ -25,7 +35,19 @@ return {
 	{
 		"vague2k/vague.nvim",
 		config = function()
-			require("vague").setup({})
+			require("vague").setup({
+				transparent = true,
+			})
+			-- vim.cmd.colorscheme("vague")
 		end,
+	},
+	{
+		{
+			"ring0-rootkit/ring0-dark.nvim",
+			priority = 1000, -- Make sure to load this before all the other start plugins.
+			init = function()
+				vim.cmd.colorscheme("gorgoroth")
+			end,
+		},
 	},
 }
