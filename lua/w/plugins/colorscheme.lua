@@ -38,7 +38,7 @@ return {
 			require("vague").setup({
 				transparent = true,
 			})
-			vim.cmd.colorscheme("vague")
+			vim.cmd.colorscheme("gorgoroth")
 		end,
 	},
 	{
@@ -49,5 +49,11 @@ return {
 				-- vim.cmd.colorscheme("lackluster-dark")
 			end,
 		},
+	},
+	{
+		"craftzdog/solarized-osaka.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
 	},
 }
