@@ -2,7 +2,14 @@ return {
 	"folke/noice.nvim",
 	dependencies = {
 		"MunifTanjim/nui.nvim",
-		"rcarriga/nvim-notify",
+		{
+			"rcarriga/nvim-notify",
+			config = function()
+				require("notify").setup({
+					background_colour = "#000000", -- or match your theme
+				})
+			end,
+		},
 	},
 	config = function()
 		require("noice").setup({
@@ -16,8 +23,8 @@ return {
 					winhighlight = { Normal = "Normal", FloatBorder = "Normal" },
 				},
 			},
-			messages = { enabled = true }, -- enabled messages again
-			popupmenu = { enabled = true }, -- enabled popupmenu for input UI
+			messages = { enabled = true },
+			popupmenu = { enabled = true },
 		})
 	end,
 }

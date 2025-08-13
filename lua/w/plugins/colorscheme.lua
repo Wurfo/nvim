@@ -38,7 +38,7 @@ return {
 			require("vague").setup({
 				transparent = true,
 			})
-			vim.cmd.colorscheme("gorgoroth")
+			vim.cmd.colorscheme("vague")
 		end,
 	},
 	{
