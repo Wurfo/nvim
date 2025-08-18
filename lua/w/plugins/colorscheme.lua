@@ -28,17 +28,19 @@ return {
 	},
 	{
 		"blazkowolf/gruber-darker.nvim",
+		priority = 1000,
 		opts = {
 			bold = false,
 		},
 	},
 	{
 		"vague2k/vague.nvim",
+		priority = 1000,
 		config = function()
 			require("vague").setup({
 				transparent = true,
 			})
-			vim.cmd.colorscheme("gorgoroth")
+			vim.cmd.colorscheme("vague")
 		end,
 	},
 	{
