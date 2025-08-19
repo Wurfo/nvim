@@ -14,7 +14,7 @@ vim.opt.signcolumn = "no"
 vim.opt.updatetime = 300
 vim.opt.clipboard = "unnamedplus"
 vim.opt.wrap = false -- disable line wrapping
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "80"
 
 vim.opt.laststatus = 3
 vim.opt.cmdheight = 0
