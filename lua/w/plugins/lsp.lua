@@ -14,6 +14,8 @@ return {
 				"clangd",
 				"gopls",
 				"lua_ls",
+				"html",
+				"cssls",
 			},
 		})
 		local lspconfig = require("lspconfig")
@@ -24,14 +26,14 @@ return {
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 		end
-		for _, server in ipairs({ "ts_ls", "rust_analyzer", "pyright", "clangd", "gopls", "lua_ls" }) do
+		for _, server in ipairs({ "ts_ls", "rust_analyzer", "pyright", "clangd", "gopls", "lua_ls", "html", "cssls" }) do
 			lspconfig[server].setup({ on_attach = on_attach })
 		end
 
 		-- Diagnostic config: inline virtual text only, no signs
 		vim.diagnostic.config({
 			virtual_text = {
-				prefix = "●",
+				prefix = "◼",
 				spacing = 4,
 			},
 			signs = false, -- no signs in the gutter

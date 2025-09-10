@@ -45,5 +45,6 @@ keymap.set("n", "N", "Nzzzv")
 
 keymap.set("n", "<leader>w", "<cmd>w<CR>")
 keymap.set("n", "<leader>x", "<cmd>x<CR>")
+keymap.set("n", "<leader>ye", ":%y+<CR>", { noremap = true, silent = true })
 
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
