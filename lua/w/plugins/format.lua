@@ -12,6 +12,10 @@ return {
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				go = { "gofmt" },
+				html = { "prettier" },
+				css = { "prettier" },
+				javascriptreact = { "prettier" },
+				typescriptreact = { "prettier" },
 			},
 		})
 	end,
