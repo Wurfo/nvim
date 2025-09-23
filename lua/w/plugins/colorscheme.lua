@@ -53,14 +53,14 @@ return {
 			require("vague").setup({
 				transparent = true,
 			})
-			vim.cmd.colorscheme("custom")
+			-- vim.cmd.colorscheme("mountain")
 		end,
 	},
 	{
 		"ring0-rootkit/ring0-dark.nvim",
 		priority = 1000, -- Make sure to load this before all the other start plugins.
 		init = function()
-			-- vim.cmd.colorscheme("lackluster-dark")
+			vim.cmd.colorscheme("custom")
 		end,
 	},
 	{
