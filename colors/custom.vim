@@ -12,7 +12,7 @@ let g:colors_name = 'spherecustom'
 highlight Normal        guifg=#FEFEFE guibg=#202020
 highlight NormalFloat   guifg=#FEFEFE guibg=#202020
 highlight Comment       guifg=#6f7b68
-highlight TSComment       guifg=#6f7b68
+highlight TSComment     guifg=#6f7b68
 highlight Conceal       guibg=#262626
 highlight Constant      guifg=#cccccc
 "highlight CursorColumn
@@ -63,8 +63,8 @@ highlight VertSplit     guifg=#303030
 highlight Visual        guibg=#454545
 highlight WarningMsg    guifg=#FFFEDB
 highlight Float         guifg=#6f7b68
-highlight Number         guifg=#6f7b68
-highlight Boolean         guifg=#6f7b68
-highlight WinSeparator         guibg=#111111 guifg=#888888
+highlight Number        guifg=#6f7b68
+highlight Boolean       guifg=#6f7b68
+highlight WinSeparator  guibg=#111111 guifg=#888888
 
 highlight @markup.link.label.markdown_inline cterm=NONE

@@ -22,8 +22,6 @@ return {
 				bordered = false, -- removes the bg color from floats/popups
 				increase_contrast = false, -- only changes the line number and active line number for now.
 			})
-
-			-- vim.cmd.colorscheme("gruber-darker")
 		end,
 	},
 	{
@@ -53,15 +51,12 @@ return {
 			require("vague").setup({
 				transparent = true,
 			})
-			-- vim.cmd.colorscheme("mountain")
 		end,
 	},
 	{
 		"ring0-rootkit/ring0-dark.nvim",
 		priority = 1000, -- Make sure to load this before all the other start plugins.
-		init = function()
-			vim.cmd.colorscheme("custom")
-		end,
+		init = function() end,
 	},
 	{
 		"craftzdog/solarized-osaka.nvim",
@@ -92,5 +87,18 @@ return {
 	},
 	{
 		"lifepillar/vim-solarized8",
+	},
+	{
+		"darianmorat/gruvdark.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+	{
+		"mitch1000/backpack.nvim",
+		config = function()
+			require("backpack").setup()
+			vim.cmd.colorscheme("custom")
+		end,
 	},
 }
