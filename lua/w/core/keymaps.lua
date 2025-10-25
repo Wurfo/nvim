@@ -48,3 +48,6 @@ keymap.set("n", "<leader>x", "<cmd>x<CR>")
 keymap.set("n", "<leader>ye", ":%y+<CR>", { noremap = true, silent = true })
 
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- typst preview
+keymap.set("n", "<leader>tp", "<cmd>TypstPreview<CR>")

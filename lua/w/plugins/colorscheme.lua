@@ -49,7 +49,35 @@ return {
 		priority = 1000,
 		config = function()
 			require("vague").setup({
-				transparent = true,
+				transparent = false,
+				bold = true,
+				italic = true,
+				style = {
+					boolean = "bold",
+					number = "none",
+					float = "none",
+					error = "bold",
+					comments = "italic",
+					conditionals = "none",
+					functions = "none",
+					headings = "bold",
+					operators = "none",
+					strings = "italic",
+					variables = "none",
+
+					-- keywords
+					keywords = "none",
+					keyword_return = "italic",
+					keywords_loop = "none",
+					keywords_label = "none",
+					keywords_exception = "none",
+
+					-- builtin
+					builtin_constants = "bold",
+					builtin_functions = "none",
+					builtin_types = "bold",
+					builtin_variables = "none",
+				},
 			})
 		end,
 	},
@@ -81,6 +109,12 @@ return {
 	},
 	{
 		"sainnhe/sonokai",
+		priority = 1000,
+		config = function()
+			vim.g.sonokai_transparent_background = "1"
+			vim.g.sonokai_enable_italic = "0"
+			vim.g.sonokai_style = "andromeda"
+		end,
 	},
 	{
 		"loctvl842/monokai-pro.nvim",
@@ -90,6 +124,12 @@ return {
 	},
 	{
 		"darianmorat/gruvdark.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+	{
+		"ficd0/ashen.nvim",
 		lazy = false,
 		priority = 1000,
 		opts = {},
