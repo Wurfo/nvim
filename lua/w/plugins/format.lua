@@ -16,6 +16,7 @@ return {
 				css = { "prettier" },
 				javascriptreact = { "prettier" },
 				typescriptreact = { "prettier" },
+				java = { "google-java-format" },
 			},
 		})
 	end,

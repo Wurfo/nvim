@@ -17,6 +17,11 @@ return {
 				"html",
 				"cssls",
 			},
+			automatic_enable = {
+				exclude = {
+					"jdtls",
+				},
+			},
 			handlers = {
 				-- default handler for all servers
 				function(server)
