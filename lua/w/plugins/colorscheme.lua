@@ -138,7 +138,7 @@ return {
 		"mitch1000/backpack.nvim",
 		config = function()
 			require("backpack").setup()
-			vim.cmd.colorscheme("solarized-osaka")
+			vim.cmd.colorscheme("custom")
 		end,
 	},
 }
