@@ -51,7 +51,7 @@ return {
 			require("vague").setup({
 				transparent = false,
 				bold = true,
-				italic = true,
+				italic = false,
 				style = {
 					boolean = "bold",
 					number = "none",
@@ -60,22 +60,22 @@ return {
 					comments = "italic",
 					conditionals = "none",
 					functions = "none",
-					headings = "bold",
+					headings = "none",
 					operators = "none",
-					strings = "italic",
+					strings = "none",
 					variables = "none",
 
 					-- keywords
 					keywords = "none",
-					keyword_return = "italic",
+					keyword_return = "none",
 					keywords_loop = "none",
 					keywords_label = "none",
 					keywords_exception = "none",
 
 					-- builtin
-					builtin_constants = "bold",
+					builtin_constants = "none",
 					builtin_functions = "none",
-					builtin_types = "bold",
+					builtin_types = "none",
 					builtin_variables = "none",
 				},
 			})
@@ -138,7 +138,33 @@ return {
 		"mitch1000/backpack.nvim",
 		config = function()
 			require("backpack").setup()
-			vim.cmd.colorscheme("solarized-osaka")
+		end,
+	},
+	{
+		"sainnhe/everforest",
+		priority = 1000,
+		config = function() end,
+	},
+	{
+		"Shatur/neovim-ayu",
+		priority = 1000,
+		config = function() end,
+	},
+	{
+		"shaunsingh/nord.nvim",
+		priority = 1000,
+		config = function() end,
+	},
+	{
+		"catppuccin/nvim",
+		priority = 1000,
+		config = function() end,
+	},
+	{
+		"bjarneo/ash.nvim",
+		priority = 1000,
+		config = function()
+			vim.cmd([[colorscheme catppuccin-mocha]])
 		end,
 	},
 }
