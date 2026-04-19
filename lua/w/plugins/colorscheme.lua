@@ -164,7 +164,7 @@ return {
 		"bjarneo/ash.nvim",
 		priority = 1000,
 		config = function()
-			vim.cmd([[colorscheme vague]])
+			-- vim.cmd([[colorscheme vague]])
 		end,
 	},
 	{
@@ -198,7 +198,7 @@ return {
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
 			-- require("koda").setup({ transparent = true })
-			vim.cmd("colorscheme koda")
+			vim.cmd("colorscheme zenwritten")
 		end,
 	},
 }

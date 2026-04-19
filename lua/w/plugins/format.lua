@@ -18,6 +18,12 @@ return {
 				typescriptreact = { "prettier" },
 				java = { "google-java-format" },
 			},
+
+			formatters = {
+				clang_format = {
+					command = "/opt/homebrew/opt/llvm/bin/clang-format",
+				},
+			},
 		})
 	end,
 }
