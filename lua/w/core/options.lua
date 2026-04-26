@@ -2,6 +2,8 @@ vim.g.mapleader = " " -- set leader key properly
 
 -- Make cursor blink and be a bar
 -- vim.opt.guicursor = "n-v-c-sm-i-ci-ve:block-blinkwait1000-blinkon500-blinkoff500"
+-- vim.opt.guicursor = "a:block-blinkwait700-blinkon400-blinkoff400"
+vim.opt.guicursor = "a:block"
 
 vim.opt.number = true
 vim.opt.relativenumber = true

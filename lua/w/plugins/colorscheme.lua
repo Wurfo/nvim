@@ -52,32 +52,35 @@ return {
 				transparent = false,
 				bold = true,
 				italic = false,
-				style = {
-					boolean = "bold",
-					number = "none",
-					float = "none",
-					error = "bold",
-					comments = "italic",
-					conditionals = "none",
-					functions = "none",
-					headings = "none",
-					operators = "none",
-					strings = "none",
-					variables = "none",
-
-					-- keywords
-					keywords = "none",
-					keyword_return = "none",
-					keywords_loop = "none",
-					keywords_label = "none",
-					keywords_exception = "none",
-
-					-- builtin
-					builtin_constants = "none",
-					builtin_functions = "none",
-					builtin_types = "none",
-					builtin_variables = "none",
+				colors = {
+					bg = "#181C27",
 				},
+				-- 	style = {
+				-- 		boolean = "bold",
+				-- 		number = "none",
+				-- 		float = "none",
+				-- 		error = "bold",
+				-- 		comments = "italic",
+				-- 		conditionals = "none",
+				-- 		functions = "none",
+				-- 		headings = "none",
+				-- 		operators = "none",
+				-- 		strings = "none",
+				-- 		variables = "none",
+				--
+				-- 		-- keywords
+				-- 		keywords = "none",
+				-- 		keyword_return = "none",
+				-- 		keywords_loop = "none",
+				-- 		keywords_label = "none",
+				-- 		keywords_exception = "none",
+				--
+				-- 		-- builtin
+				-- 		builtin_constants = "none",
+				-- 		builtin_functions = "none",
+				-- 		builtin_types = "none",
+				-- 		builtin_variables = "none",
+				-- 	},
 			})
 		end,
 	},
@@ -198,7 +201,7 @@ return {
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
 			-- require("koda").setup({ transparent = true })
-			vim.cmd("colorscheme zenwritten")
+			vim.cmd.colorscheme("vague")
 		end,
 	},
 }
