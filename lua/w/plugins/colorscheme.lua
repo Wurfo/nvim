@@ -53,7 +53,7 @@ return {
 				bold = true,
 				italic = false,
 				colors = {
-					bg = "#181C27",
+					bg = "#0A0A0A",
 				},
 				-- 	style = {
 				-- 		boolean = "bold",
