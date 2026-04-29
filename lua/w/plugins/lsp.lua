@@ -6,7 +6,12 @@ return {
 	},
 
 	config = function()
-		require("mason").setup()
+		require("mason").setup({
+			ui = {
+				border = "rounded",
+			},
+			log_level = vim.log.levels.ERROR,
+		})
 
 		require("mason-lspconfig").setup({
 			ensure_installed = {
@@ -21,8 +26,7 @@ return {
 			},
 		})
 
-		local lspconfig = require("lspconfig")
-
+		-- LSP keymaps
 		local on_attach = function(_, bufnr)
 			local opts = { buffer = bufnr, silent = true }
 
@@ -32,8 +36,9 @@ return {
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 		end
 
+		-- Modern Neovim LSP config (NO lspconfig.setup anymore)
 		local servers = {
-			"tsserver",
+			"ts_ls",
 			"rust_analyzer",
 			"pyright",
 			"clangd",
@@ -43,12 +48,19 @@ return {
 			"cssls",
 		}
 
+		-- global defaults
+		vim.lsp.config("*", {
+			on_attach = on_attach,
+		})
+
+		-- per-server config (optional override point)
 		for _, server in ipairs(servers) do
-			lspconfig[server].setup({
-				on_attach = on_attach,
-			})
+			vim.lsp.config(server, {})
 		end
 
+		vim.lsp.enable(servers)
+
+		-- diagnostics UI
 		vim.diagnostic.config({
 			virtual_text = {
 				prefix = "◼",
