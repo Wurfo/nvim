@@ -33,19 +33,43 @@ return {
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+			vim.keymap.set("n", "<leader>cca", vim.lsp.buf.code_action, opts)
 		end
 
 		-- Modern Neovim LSP config (NO lspconfig.setup anymore)
 		local servers = {
-			"ts_ls",
-			"rust_analyzer",
-			"pyright",
+			-- "ts_ls",
+			-- "rust_analyzer",
+			-- "pyright",
+			-- "clangd",
+			-- "gopls",
+			-- "lua_ls",
+			-- "html",
+			-- "cssls",
+
+			"prettier",
+			"htmx",
+			"jsonls",
+			"goimports",
+			"gofumpt",
+			"cmakelang",
+			"clang-format",
+			"black",
 			"clangd",
-			"gopls",
-			"lua_ls",
-			"html",
 			"cssls",
+			"emmet_language_server",
+			"google-java-format",
+			"gopls",
+			"html",
+			"jdtls",
+			"lua_ls",
+			"ols",
+			"prettypst",
+			"pyright",
+			"rust_analyzer",
+			"svelte",
+			"tinymist",
+			"ts_ls",
 		}
 
 		-- global defaults

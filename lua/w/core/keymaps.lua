@@ -51,3 +51,6 @@ keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left
 
 -- typst preview
 keymap.set("n", "<leader>tp", "<cmd>TypstPreview<CR>")
+
+-- go if err != nil snippet
+vim.keymap.set("n", "<leader>ge", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")

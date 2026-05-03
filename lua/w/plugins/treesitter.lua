@@ -17,6 +17,9 @@ return {
 				"html",
 				"css",
 				"bash",
+				"odin",
+				"json",
+				"gleam",
 			},
 			highlight = {
 				enable = true,

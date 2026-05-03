@@ -18,7 +18,7 @@ return {
 		config = function()
 			-- you don't have to call setup
 			require("makurai").setup({
-				transparent = false, -- removes the bg color
+				transparent = true, -- removes the bg color
 				bordered = false, -- removes the bg color from floats/popups
 				increase_contrast = false, -- only changes the line number and active line number for now.
 			})
@@ -49,7 +49,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("vague").setup({
-				transparent = false, -- If true, background is not set
+				transparent = true, -- If true, background is not set
 				bold = true, -- Disable bold globally
 				italic = false, -- Disable italic globally
 				-- on_highlights = function(hl, colors) end,
@@ -158,7 +158,11 @@ return {
 	{
 		"catppuccin/nvim",
 		priority = 1000,
-		config = function() end,
+		config = function()
+			require("catppuccin").setup({
+				transparent_background = true,
+			})
+		end,
 	},
 	{
 		"bjarneo/ash.nvim",
@@ -212,11 +216,11 @@ return {
 				styles = {
 					bold = true,
 					italic = false,
-					transparency = false,
+					transparency = true,
 				},
 			})
 
-			vim.cmd("colorscheme rose-pine")
+			vim.cmd.colorscheme("rose-pine")
 		end,
 	},
 }

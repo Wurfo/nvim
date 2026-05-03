@@ -1,5 +1,5 @@
 " took many of these colors from github.com/CosecSecCot/cosec-twilight.nvim.
-
+"
 set bg=dark
 hi clear
 if exists('syntax_on')
