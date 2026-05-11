@@ -1,29 +1,29 @@
 vim.g.mapleader = " " -- set leader key properly
 
--- Make cursor blink and be a bar
--- vim.opt.guicursor = "n-v-c-sm-i-ci-ve:block-blinkwait1000-blinkon500-blinkoff500"
--- vim.opt.guicursor = "a:block-blinkwait700-blinkon400-blinkoff400"
-vim.opt.guicursor = "a:block"
-
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.termguicolors = true
-vim.opt.scrolloff = 6
-vim.opt.signcolumn = "no"
-vim.opt.updatetime = 300
-vim.opt.clipboard = "unnamedplus"
-vim.opt.wrap = true
--- vim.opt.colorcolumn = "80"
-
-vim.opt.laststatus = 3
-vim.opt.cmdheight = 0
-vim.o.showmode = false
-vim.opt.statusline = ""
-
 local opt = vim.opt -- for conciseness
+
+-- Make cursor blink and be a bar
+opt.guicursor = "n-v-c-sm-i-ci-ve:block-blinkwait1000-blinkon500-blinkoff500"
+-- opt.guicursor = "a:block-blinkwait700-blinkon400-blinkoff400"
+-- opt.guicursor = "a:block"
+
+opt.number = true
+opt.relativenumber = true
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+opt.termguicolors = true
+opt.scrolloff = 6
+opt.signcolumn = "no"
+opt.updatetime = 300
+opt.clipboard = "unnamedplus"
+opt.wrap = false
+opt.colorcolumn = "80"
+
+opt.laststatus = 3
+opt.cmdheight = 0
+vim.o.showmode = false
+opt.statusline = ""
 
 -- tabs & indentation
 opt.autoindent = true -- copy indent from current line when starting new one

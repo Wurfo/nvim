@@ -23,8 +23,9 @@ return {
 					configuration = {
 						runtimes = {
 							{
-								name = "JavaSE-17",
-								path = "/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home",
+								name = "JavaSE-23",
+								-- path = "/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home",
+								path = os.getenv("JAVA_HOME"),
 							},
 						},
 					},

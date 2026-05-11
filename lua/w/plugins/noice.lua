@@ -23,8 +23,19 @@ return {
 					winhighlight = { Normal = "Normal", FloatBorder = "Normal" },
 				},
 			},
+
 			messages = { enabled = true },
 			popupmenu = { enabled = true },
+
+			routes = {
+				{
+					filter = {
+						event = "notify",
+						find = "deprecated",
+					},
+					opts = { skip = true },
+				},
+			},
 		})
 	end,
 }
