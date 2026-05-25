@@ -16,7 +16,8 @@ return {
 				css = { "prettier" },
 				javascriptreact = { "prettier" },
 				typescriptreact = { "prettier" },
-				java = { "jdtls" },
+				-- java = { "jdtls" },
+				haskell = { "fourmulo" },
 			},
 
 			formatters = {

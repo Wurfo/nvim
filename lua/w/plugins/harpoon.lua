@@ -41,5 +41,11 @@ return {
 		map("n", "<leader>4", function()
 			harpoon:list():select(4)
 		end, "Harpoon File 4")
+		map("n", "<leader>5", function()
+			harpoon:list():select(5)
+		end, "Harpoon File 5")
+		map("n", "<leader>6", function()
+			harpoon:list():select(6)
+		end, "Harpoon File 6")
 	end,
 }

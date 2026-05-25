@@ -3,14 +3,15 @@ vim.g.mapleader = " " -- set leader key properly
 local opt = vim.opt -- for conciseness
 
 -- Make cursor blink and be a bar
-opt.guicursor = "n-v-c-sm-i-ci-ve:block-blinkwait1000-blinkon500-blinkoff500"
+-- opt.guicursor = "n-v-c-sm-i-ci-ve:bar-blinkwait1000-blinkon500-blinkoff500"
+-- opt.guicursor = "n-v-c-sm-i-ci-ve:block-blinkwait1000-blinkon500-blinkoff500"
 -- opt.guicursor = "a:block-blinkwait700-blinkon400-blinkoff400"
 -- opt.guicursor = "a:block"
 
 opt.number = true
 opt.relativenumber = true
-opt.tabstop = 4
-opt.shiftwidth = 4
+opt.tabstop = 2
+opt.shiftwidth = 2
 opt.expandtab = true
 opt.termguicolors = true
 opt.scrolloff = 6

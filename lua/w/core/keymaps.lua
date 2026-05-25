@@ -54,3 +54,5 @@ keymap.set("n", "<leader>tp", "<cmd>TypstPreview<CR>")
 
 -- go if err != nil snippet
 vim.keymap.set("n", "<leader>ge", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
+
+keymap.set("n", "<leader>X", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make current file executable" })

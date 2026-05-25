@@ -4,6 +4,11 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
+			require("black-metal").setup({
+				theme = "gorgoroth",
+				transparent = true,
+			})
+			require("black-metal").load()
 			-- vim.cmd.colorscheme("spherecustom")
 		end,
 	},
@@ -220,7 +225,9 @@ return {
 				},
 			})
 
-			vim.cmd.colorscheme("rose-pine")
+			-- vim.cmd.colorscheme("rose-pine")
+			vim.cmd.colorscheme("solarized-osaka")
+			-- vim.cmd.colorscheme("gorgoroth")
 		end,
 	},
 }

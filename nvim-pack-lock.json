@@ -1,0 +1,20 @@
+{
+  "plugins": {
+    "kanagawa.nvim": {
+      "rev": "27f1e119f3a7e6d11d435a59e3262e6affda1f83",
+      "src": "https://github.com/rebelot/kanagawa.nvim"
+    },
+    "mini.pick": {
+      "rev": "96ee37d07043aeed90ae6ae32733b2d0db8f1c13",
+      "src": "https://github.com/echasnovski/mini.pick"
+    },
+    "nvim-lspconfig": {
+      "rev": "ac98db2f9f06a56498ec890a96928774eae412c3",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "oil.nvim": {
+      "rev": "919e155fdf38e9148cdb5304faaaf53c20d703ea",
+      "src": "https://github.com/stevearc/oil.nvim"
+    }
+  }
+}
