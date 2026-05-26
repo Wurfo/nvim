@@ -20,6 +20,7 @@ return {
 				"odin",
 				"json",
 				"gleam",
+				"haskell",
 			},
 			highlight = {
 				enable = true,
