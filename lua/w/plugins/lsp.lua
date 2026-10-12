@@ -1,100 +1,40 @@
 return {
-	"neovim/nvim-lspconfig",
-	dependencies = {
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-	},
+    "mason-org/mason-lspconfig.nvim",
 
-	config = function()
-		require("mason").setup({
-			ui = {
-				border = "rounded",
-			},
-			log_level = vim.log.levels.ERROR,
-		})
+    dependencies = {
+        "mason-org/mason.nvim",
+        "neovim/nvim-lspconfig",
+    },
 
-		require("mason-lspconfig").setup({
-			ensure_installed = {
-				"ts_ls",
-				"rust_analyzer",
-				"pyright",
-				"clangd",
-				"gopls",
-				"lua_ls",
-				"html",
-				"cssls",
-				"hls",
-			},
-		})
+    opts = {
+        ensure_installed = {
+            "lua_ls",
+            "clangd",
+            "rust_analyzer",
+            "gopls",
+            "pyright",
+            "ts_ls",
+            "html",
+            "cssls",
+            "jsonls",
+            "bashls",
+        },
+    },
 
-		-- LSP keymaps
-		local on_attach = function(_, bufnr)
-			local opts = { buffer = bufnr, silent = true }
+    config = function(_, opts)
+        vim.lsp.config("lua_ls", {
+            settings = {
+                Lua = {
+                    diagnostics = {
+                        globals = { "vim" },
+                    },
+                    workspace = {
+                        library = vim.api.nvim_get_runtime_file("", true),
+                    },
+                },
+            },
+        })
 
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-			vim.keymap.set("n", "<leader>cca", vim.lsp.buf.code_action, opts)
-		end
-
-		-- Modern Neovim LSP config (NO lspconfig.setup anymore)
-		local servers = {
-			-- "ts_ls",
-			-- "rust_analyzer",
-			-- "pyright",
-			-- "clangd",
-			-- "gopls",
-			-- "lua_ls",
-			-- "html",
-			-- "cssls",
-
-			"prettier",
-			"htmx",
-			"jsonls",
-			"goimports",
-			"gofumpt",
-			"cmakelang",
-			"clang-format",
-			"black",
-			"clangd",
-			"cssls",
-			"emmet_language_server",
-			"google-java-format",
-			"gopls",
-			"html",
-			"jdtls",
-			"lua_ls",
-			"ols",
-			"prettypst",
-			"pyright",
-			"rust_analyzer",
-			"svelte",
-			"tinymist",
-			"ts_ls",
-		}
-
-		-- global defaults
-		vim.lsp.config("*", {
-			on_attach = on_attach,
-		})
-
-		-- per-server config (optional override point)
-		for _, server in ipairs(servers) do
-			vim.lsp.config(server, {})
-		end
-
-		vim.lsp.enable(servers)
-
-		-- diagnostics UI
-		vim.diagnostic.config({
-			virtual_text = {
-				prefix = "◼",
-				spacing = 4,
-			},
-			signs = false,
-			underline = true,
-			update_in_insert = false,
-			severity_sort = true,
-		})
-	end,
+        require("mason-lspconfig").setup(opts)
+    end,
 }
