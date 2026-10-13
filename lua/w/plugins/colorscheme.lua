@@ -1,24 +1,32 @@
 return {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
+    {
+        "craftzdog/solarized-osaka.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
 
-    opts = {
-        style = "night",
-        transparent = true,
+        opts = {
+            style = "night",
+            transparent = true,
 
-        styles = {
-            sidebars = "transparent",
-            floats = "transparent",
+            styles = {
+                sidebars = "transparent",
+                floats = "transparent",
+            },
+
+            on_colors = function(colors)
+                colors.bg = "NONE"
+            end,
         },
 
-        on_colors = function(colors)
-            colors.bg = "NONE"
+        config = function(_, opts)
+            require("tokyonight").setup(opts)
+            vim.cmd("colorscheme tokyonight")
         end,
     },
-
-    config = function(_, opts)
-        require("tokyonight").setup(opts)
-        vim.cmd("colorscheme tokyonight")
-    end,
 }
