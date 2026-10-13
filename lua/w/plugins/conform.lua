@@ -41,9 +41,13 @@ return {
             lsp_format = "fallback",
         },
 
-        format_on_save = {
-            timeout_ms = 1000,
-            lsp_format = "fallback",
-        },
+        format_on_save = function(bufnr)
+            return {
+                timeout_ms = 1000,
+                lsp_format = vim.bo[bufnr].filetype == "java"
+                    and "prefer"
+                    or "fallback",
+            }
+        end,
     },
 }
