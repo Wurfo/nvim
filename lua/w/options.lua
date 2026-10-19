@@ -9,9 +9,9 @@ opt.termguicolors = true
 opt.showmode = false
 opt.laststatus = 3
 opt.cmdheight = 0
-opt.wrap = false
-opt.scrolloff = 8
-opt.sidescrolloff = 8
+opt.wrap = true
+opt.scrolloff = 5
+opt.sidescrolloff = 5
 
 -- Indentation
 opt.expandtab = true

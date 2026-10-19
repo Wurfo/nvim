@@ -50,6 +50,50 @@ return {
         opts = {},
     },
     {
+        "WeiTing1991/suannhai.nvim",
+        lazy = false,
+        priority = 1000,
+        build = "python3 scripts/sync-palettes.py",
+        config = function()
+            require("suannhai").setup({
+                transparent = false,
+            })
+        end,
+    },
+    {
+        "Aejkatappaja/cendre",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require("cendre").setup({
+                background = "hard", -- "hard" | "medium" | "soft"
+                italic_virtual_text = false,
+            })
+        end,
+    },
+    {
+        "g-kirti/hardhat.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require("hardhat").setup({
+                -- optional settings
+            })
+        end,
+    },
+    {
+        "mitander/flume.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.opt.termguicolors = true
+            -- require("flume").setup({
+            --     schema = "dusk",
+            -- })
+        end,
+    },
+    {
+
         "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
@@ -71,7 +115,7 @@ return {
         config = function(_, opts)
             require("tokyonight").setup(opts)
             -- vim.cmd("colorscheme tokyonight")
-            vim.cmd("colorscheme luna")
+            -- vim.cmd("colorscheme gruber-darker")
         end,
     },
 }

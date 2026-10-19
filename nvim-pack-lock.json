@@ -1,0 +1,12 @@
+{
+  "plugins": {
+    "guts.nvim": {
+      "rev": "e033ab8d594159d79c099764f8e7c63a733aa471",
+      "src": "https://github.com/vossenwout/guts.nvim"
+    },
+    "sanzo.nvim": {
+      "rev": "47b46a5b446f24b6c698ac994f6303c515d0732b",
+      "src": "https://codeberg.org/navahas/sanzo.nvim"
+    }
+  }
+}

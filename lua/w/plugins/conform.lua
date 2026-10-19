@@ -19,6 +19,7 @@ return {
     opts = {
         formatters_by_ft = {
             c = { "clang_format" },
+            h = { "clang_format" },
             cpp = { "clang_format" },
             rust = { "rustfmt" },
             go = { "gofmt" },
@@ -44,9 +45,7 @@ return {
         format_on_save = function(bufnr)
             return {
                 timeout_ms = 1000,
-                lsp_format = vim.bo[bufnr].filetype == "java"
-                    and "prefer"
-                    or "fallback",
+                lsp_format = vim.bo[bufnr].filetype == "java" and "prefer" or "fallback",
             }
         end,
     },
