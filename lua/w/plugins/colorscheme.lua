@@ -56,7 +56,7 @@ return {
         build = "python3 scripts/sync-palettes.py",
         config = function()
             require("suannhai").setup({
-                transparent = false,
+                transparent = true,
             })
         end,
     },
@@ -86,14 +86,39 @@ return {
         lazy = false,
         priority = 1000,
         config = function()
-            vim.opt.termguicolors = true
+            -- vim.opt.termguicolors = true
             -- require("flume").setup({
             --     schema = "dusk",
+            --     transparent = true,
+            --     styles = {
+            --         comments = { italic = true },
+            --     },
             -- })
         end,
     },
     {
-
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000,
+        config = function()
+            require("catppuccin").setup({
+                transparent_background = true,
+                float = {
+                    transparent = true,
+                },
+            })
+        end,
+    },
+    {
+        "rebelot/kanagawa.nvim",
+        priority = 1000,
+        config = function()
+            require("kanagawa").setup({
+                transparent = true,
+            })
+        end,
+    },
+    {
         "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
@@ -116,6 +141,10 @@ return {
             require("tokyonight").setup(opts)
             -- vim.cmd("colorscheme tokyonight")
             -- vim.cmd("colorscheme gruber-darker")
+            -- vim.cmd("colorscheme catppuccin-mocha")
+            vim.cmd("colorscheme suannhai-rouiro")
+            -- vim.cmd("colorscheme kanagawa-dragon")
+            -- vim.cmd("colorscheme solarized-osaka")
         end,
     },
 }

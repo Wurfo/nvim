@@ -14,7 +14,7 @@ vim.pack.add({
 })
 
 require("sanzo").setup({
-    transparent = false, -- remove background
+    transparent = true, -- remove background
     italic = true, -- italicize comments and folds
     on_highlights = function(h, p) -- one-off group overrides
         -- see :h nvim_set_hl for all available keys (fg, bg, bold, italic, ...)
@@ -22,7 +22,7 @@ require("sanzo").setup({
     end,
 })
 
-vim.cmd("colorscheme guts")
+vim.cmd("colorscheme sanzo")
 
 require("w.options")
 require("w.keymaps")

@@ -41,7 +41,7 @@ opt.updatetime = 250
 opt.timeoutlen = 400
 
 -- Cursor
-opt.guicursor = "a:block-blinkwait700-blinkon400-blinkoff250"
+-- opt.guicursor = "a:block-blinkwait700-blinkon400-blinkoff250"
 
 -- Whitespaces
 -- opt.list = true

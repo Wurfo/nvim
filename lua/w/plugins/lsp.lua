@@ -19,6 +19,9 @@ return {
             "jsonls",
             "bashls",
         },
+        automatic_enable = {
+            exclude = { "jdtls" },
+        },
     },
 
     config = function(_, opts)
