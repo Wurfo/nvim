@@ -1,5 +1,8 @@
 return {
     {
+        "y9san9/y9nika.nvim",
+    },
+    {
         "harshrajsachan/omni.nvim",
         lazy = false,
         priority = 1000,
@@ -47,7 +50,10 @@ return {
         "craftzdog/solarized-osaka.nvim",
         lazy = false,
         priority = 1000,
-        opts = {},
+        opts = {
+            style = "vivid",
+            transparent = true,
+        },
     },
     {
         "WeiTing1991/suannhai.nvim",
@@ -142,9 +148,10 @@ return {
             -- vim.cmd("colorscheme tokyonight")
             -- vim.cmd("colorscheme gruber-darker")
             -- vim.cmd("colorscheme catppuccin-mocha")
-            vim.cmd("colorscheme suannhai-rouiro")
+            -- vim.cmd("colorscheme suannhai-rouiro")
             -- vim.cmd("colorscheme kanagawa-dragon")
-            -- vim.cmd("colorscheme solarized-osaka")
+            -- vim.cmd([[colorscheme solarized-osaka]])
+            vim.cmd([[colorscheme y9nika]])
         end,
     },
 }

@@ -27,6 +27,6 @@ return {
 
         neocodeium.setup()
 
-        vim.keymap.set("i", "<M-l>", neocodeium.accept)
+        vim.keymap.set("i", "<C-l>", neocodeium.accept)
     end,
 }

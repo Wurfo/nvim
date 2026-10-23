@@ -27,5 +27,6 @@
   "solarized-osaka.nvim": { "branch": "main", "commit": "a21176efde15fab21fabda0bf2ba123ed6d7332d" },
   "suannhai.nvim": { "branch": "main", "commit": "378aaf55ef667ac3ff1d013f5bb0ecf75d8aa1b1" },
   "tokyonight.nvim": { "branch": "main", "commit": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6" },
+  "y9nika.nvim": { "branch": "main", "commit": "99e259de7b37bad4f60c36527adb840e876b43fa" },
   "zenbones.nvim": { "branch": "main", "commit": "8304d8df9b823ff11e103afa62f38c39f534abe6" }
 }

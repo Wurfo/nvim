@@ -40,8 +40,13 @@ opt.clipboard = "unnamedplus"
 opt.updatetime = 250
 opt.timeoutlen = 400
 
--- Cursor
+--- Cursor
+---
+-- thick
 -- opt.guicursor = "a:block-blinkwait700-blinkon400-blinkoff250"
+-- devasliflife
+-- vim.opt.guicursor =
+--     "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 
 -- Whitespaces
 -- opt.list = true
