@@ -1,33 +1,63 @@
 return {
     {
-        "y9san9/y9nika.nvim",
-    },
-    {
-        "harshrajsachan/omni.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            vim.g.omnitheme_transparent = true
-            -- vim.cmd("colorscheme omni-blackout")
-        end,
-    },
-    {
-        "wtfox/luna.nvim",
+        "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
         opts = {
+            style = "night",
             transparent = true,
-            accent = 0.7, -- 0-1, blends syntax accents toward grey_light; 1 = full color
-            plugins = {
-                all = true, -- enable every plugin integration unconditionally
-                auto = true, -- when plugins.all is false, autodetect via lazy.nvim
+            styles = {
+                sidebars = "transparent",
+                floats = "transparent",
             },
-            on_colors = function(colors) end,
-            on_highlights = function(highlights, colors) end,
         },
+        config = function(_, opts)
+            require("tokyonight").setup(opts)
+            -- vim.cmd.colorscheme("tokyonight")
+        end,
     },
+
+    {
+        "sainnhe/everforest",
+        lazy = false,
+        config = function()
+            vim.g.everforest_background = "hard"
+            vim.g.everforest_transparent_background = 2
+        end,
+    },
+
+    {
+        "miladggg/neonwave.nvim",
+        lazy = false,
+        priority = 1000,
+    },
+
+    {
+        "olimorris/onedarkpro.nvim",
+        lazy = false,
+    },
+
+    {
+        "sainnhe/gruvbox-material",
+        lazy = false,
+    },
+
+    {
+        "y9san9/y9nika.nvim",
+        lazy = false,
+    },
+
+    {
+        "harshrajsachan/omni.nvim",
+        lazy = false,
+        init = function()
+            vim.g.omnitheme_transparent = false
+        end,
+    },
+
     {
         "blazkowolf/gruber-darker.nvim",
+        lazy = false,
         opts = {
             bold = true,
             italic = {
@@ -36,122 +66,97 @@ return {
             },
         },
     },
+
     {
         "zenbones-theme/zenbones.nvim",
-        dependencies = "rktjmp/lush.nvim",
+        dependencies = { "rktjmp/lush.nvim" },
         lazy = false,
-        priority = 1000,
-        -- config = function()
-        --     vim.g.zenbones_darken_comments = 45
-        --     vim.cmd.colorscheme('zenbones')
-        -- end
     },
+
     {
         "craftzdog/solarized-osaka.nvim",
         lazy = false,
-        priority = 1000,
         opts = {
             style = "vivid",
             transparent = true,
         },
     },
+
     {
         "WeiTing1991/suannhai.nvim",
         lazy = false,
-        priority = 1000,
         build = "python3 scripts/sync-palettes.py",
-        config = function()
-            require("suannhai").setup({
-                transparent = true,
-            })
-        end,
+        opts = {
+            transparent = true,
+        },
     },
+
     {
         "Aejkatappaja/cendre",
         lazy = false,
-        priority = 1000,
-        config = function()
-            require("cendre").setup({
-                background = "hard", -- "hard" | "medium" | "soft"
-                italic_virtual_text = false,
-            })
-        end,
+        opts = {
+            background = "hard",
+            italic_virtual_text = false,
+        },
     },
+
     {
         "g-kirti/hardhat.nvim",
         lazy = false,
-        priority = 1000,
-        config = function()
-            require("hardhat").setup({
-                -- optional settings
-            })
-        end,
+        -- opts = {},
     },
+
     {
         "mitander/flume.nvim",
         lazy = false,
-        priority = 1000,
-        config = function()
-            -- vim.opt.termguicolors = true
-            -- require("flume").setup({
-            --     schema = "dusk",
-            --     transparent = true,
-            --     styles = {
-            --         comments = { italic = true },
-            --     },
-            -- })
-        end,
+        opts = {
+            schema = "dusk",
+            transparent = true,
+            styles = {
+                comments = { italic = true },
+            },
+        },
     },
+
     {
         "catppuccin/nvim",
         name = "catppuccin",
-        priority = 1000,
-        config = function()
-            require("catppuccin").setup({
-                transparent_background = true,
-                float = {
-                    transparent = true,
-                },
-            })
-        end,
+        lazy = false,
+        opts = {
+            transparent_background = false,
+            float = {
+                transparent = false,
+            },
+        },
     },
+
     {
         "rebelot/kanagawa.nvim",
-        priority = 1000,
-        config = function()
-            require("kanagawa").setup({
-                transparent = true,
-            })
-        end,
+        lazy = false,
+        opts = {
+            transparent = true,
+        },
     },
     {
-        "folke/tokyonight.nvim",
+        "rezniqov/soviet.nvim",
         lazy = false,
         priority = 1000,
-
-        opts = {
-            style = "night",
-            transparent = true,
-
-            styles = {
-                sidebars = "transparent",
-                floats = "transparent",
-            },
-
-            on_colors = function(colors)
-                colors.bg = "NONE"
-            end,
-        },
-
-        config = function(_, opts)
-            require("tokyonight").setup(opts)
-            -- vim.cmd("colorscheme tokyonight")
-            -- vim.cmd("colorscheme gruber-darker")
-            -- vim.cmd("colorscheme catppuccin-mocha")
-            -- vim.cmd("colorscheme suannhai-rouiro")
-            -- vim.cmd("colorscheme kanagawa-dragon")
-            -- vim.cmd([[colorscheme solarized-osaka]])
-            vim.cmd([[colorscheme y9nika]])
-        end,
+    },
+    {
+        "Aejkatappaja/sora",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+    {
+        "zitrocode/carvion.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+    {
+        "MuhammedZohaib/emberbox.nvim",
+        lazy = false,
+        priority = 1000,
     },
 }

@@ -54,5 +54,12 @@ return {
             end,
             desc = "Help tags",
         },
+        {
+            "<leader>ut",
+            function()
+                Snacks.picker.colorschemes()
+            end,
+            desc = "Choose colorscheme",
+        },
     },
 }

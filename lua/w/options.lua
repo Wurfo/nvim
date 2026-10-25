@@ -15,9 +15,9 @@ opt.sidescrolloff = 5
 
 -- Indentation
 opt.expandtab = true
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.softtabstop = 4
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.softtabstop = 2
 opt.smartindent = true
 
 -- Search
@@ -41,12 +41,9 @@ opt.updatetime = 250
 opt.timeoutlen = 400
 
 --- Cursor
----
--- thick
 -- opt.guicursor = "a:block-blinkwait700-blinkon400-blinkoff250"
--- devasliflife
--- vim.opt.guicursor =
---     "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+vim.opt.guicursor =
+    "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 
 -- Whitespaces
 -- opt.list = true

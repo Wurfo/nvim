@@ -7,9 +7,12 @@ map("n", "J", "mzJ`z", { desc = "Join lines" })
 map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move lines down" })
 map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move lines up" })
 
-map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {
-    desc = "Replace word under cursor",
-})
+map(
+    "n",
+    "<leader>s",
+    [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+    { desc = "Replace word under cursor" }
+)
 
 -- Navigation
 map("n", "<C-d>", "<C-d>zz")
@@ -18,9 +21,7 @@ map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
 -- Search
-map("n", "<leader>nh", "<cmd>nohlsearch<CR>", {
-    desc = "Clear search highlights",
-})
+map("n", "<leader>nh", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
 
 -- Files
 map("n", "<leader>w", "<cmd>write<CR>", { desc = "Save file" })
@@ -58,9 +59,7 @@ map("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
 map("n", "K", vim.lsp.buf.hover, { desc = "Hover documentation" })
 
 map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
-map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {
-    desc = "Code action",
-})
+map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 
 map("n", "[d", function()
     vim.diagnostic.jump({ count = -1, float = true })

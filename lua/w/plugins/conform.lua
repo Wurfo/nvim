@@ -19,12 +19,12 @@ return {
     opts = {
         formatters_by_ft = {
             c = { "clang_format" },
-            h = { "clang_format" },
             cpp = { "clang_format" },
             rust = { "rustfmt" },
             go = { "gofmt" },
             lua = { "stylua" },
             python = { "ruff_format" },
+            swift = { "swiftformat" },
 
             javascript = { "prettier" },
             javascriptreact = { "prettier" },
