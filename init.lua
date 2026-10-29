@@ -75,7 +75,10 @@ require("w.keymaps")
 -- require("w.autocmds")
 require("w.lazy")
 
-vim.cmd(":hi statusline guibg=NONE") -- not sure about this
-
-vim.cmd([[colorscheme solarized-osaka]])
+-- vim.cmd([[colorscheme solarized-osaka]])
 -- vim.cmd([[colorscheme everforest]])
+-- vim.cmd([[colorscheme catppuccin-mocha]])
+-- vim.cmd([[colorscheme gruvbox-material]])
+vim.cmd([[colorscheme gruber-darker-renaissance]])
+
+vim.cmd(":hi statusline guibg=NONE") -- not sure about this

@@ -155,6 +155,35 @@ return {
         opts = {},
     },
     {
+        "kryptamine/gruber-darker-renaissance",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require("gruber-darker-renaissance").setup({
+                bold = true,
+                italic = {
+                    strings = false,
+                    comments = false,
+                    operators = false,
+                    folds = true,
+                },
+                invert = {
+                    signs = false,
+                    tabline = false,
+                    visual = false,
+                },
+                undercurl = true,
+                underline = true,
+                transparent = false, -- leave the window background to the terminal; floats stay opaque
+                terminal_colors = true, -- set `g:terminal_color_*`
+                sidebars = { "qf", "help" }, -- filetypes with the darker sidebar background
+                plugins = {}, -- every integration is on; set one to false, e.g. `snacks = false`
+                on_colors = function(colors) end,
+                on_highlights = function(highlights, colors) end,
+            })
+        end,
+    },
+    {
         "MuhammedZohaib/emberbox.nvim",
         lazy = false,
         priority = 1000,
