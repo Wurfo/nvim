@@ -3,7 +3,7 @@ local opt = vim.opt
 -- Appearance
 opt.number = true
 opt.relativenumber = true
-opt.cursorline = false
+opt.cursorline = true
 opt.signcolumn = "no"
 opt.termguicolors = true
 opt.showmode = false
@@ -45,9 +45,6 @@ opt.timeoutlen = 400
 vim.opt.guicursor =
     "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 
--- Whitespaces
+-- Whitespaces (also not sure about these, i like them in emacs and vscode but im not sure about nvim)
 -- opt.list = true
---
--- opt.listchars = {
---     space = "·",
--- }
+-- opt.listchars = { space = "·" }

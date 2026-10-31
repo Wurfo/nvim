@@ -79,6 +79,8 @@ require("w.lazy")
 -- vim.cmd([[colorscheme everforest]])
 -- vim.cmd([[colorscheme catppuccin-mocha]])
 -- vim.cmd([[colorscheme gruvbox-material]])
-vim.cmd([[colorscheme gruber-darker-renaissance]])
+-- vim.cmd([[colorscheme gruber-darker-renaissance]])
+vim.cmd([[colorscheme y9nika]])
+-- vim.cmd.colorscheme("bark")
 
 vim.cmd(":hi statusline guibg=NONE") -- not sure about this

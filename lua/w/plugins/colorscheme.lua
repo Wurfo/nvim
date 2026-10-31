@@ -110,7 +110,7 @@ return {
         "mitander/flume.nvim",
         lazy = false,
         opts = {
-            schema = "dusk",
+            -- schema = "dusk",
             transparent = true,
             styles = {
                 comments = { italic = true },
@@ -123,10 +123,12 @@ return {
         name = "catppuccin",
         lazy = false,
         opts = {
-            transparent_background = false,
+            transparent_background = true,
             float = {
-                transparent = false,
+                transparent = true,
             },
+            no_italic = true,
+            no_bold = true,
         },
     },
 
@@ -134,7 +136,7 @@ return {
         "rebelot/kanagawa.nvim",
         lazy = false,
         opts = {
-            transparent = true,
+            transparent = false,
         },
     },
     {
@@ -187,5 +189,54 @@ return {
         "MuhammedZohaib/emberbox.nvim",
         lazy = false,
         priority = 1000,
+    },
+    {
+        "metalelf0/black-metal-theme-neovim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require("black-metal").setup({
+                -- optional configuration here, e.g.:
+                trve = true, -- switch this to false if you want light variants
+                transparent = true,
+                code_style = {
+                    comments = "none",
+                    conditionals = "none",
+                    functions = "none",
+                    keywords = "none",
+                    headings = "bold", -- Markdown headings
+                    operators = "none",
+                    keyword_return = "none",
+                    strings = "none",
+                    variables = "none",
+                },
+                italics = false,
+            })
+            -- require("black-metal").load()
+        end,
+    },
+    {
+        "mellow-theme/mellow.nvim",
+        lazy = false,
+        priority = 1000,
+    },
+    {
+        "datsfilipe/vesper.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require("vesper").setup({
+                transparent = true, -- Boolean: Sets the background to transparent
+                italics = {
+                    comments = false, -- Boolean: Italicizes comments
+                    keywords = false, -- Boolean: Italicizes keywords
+                    functions = false, -- Boolean: Italicizes functions
+                    strings = false, -- Boolean: Italicizes strings
+                    variables = false, -- Boolean: Italicizes variables
+                },
+                overrides = {}, -- A dictionary of group names, can be a function returning a dictionary or a table.
+                palette_overrides = {},
+            })
+        end,
     },
 }

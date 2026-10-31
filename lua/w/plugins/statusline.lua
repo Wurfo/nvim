@@ -11,7 +11,7 @@ return {
 
             sections = {
                 lualine_a = { "mode" },
-                lualine_b = { "branch" },
+                lualine_b = {},
                 lualine_c = { "filename" },
                 lualine_x = {
                     function()
@@ -27,7 +27,7 @@ return {
                         end
                     end,
                 },
-                lualine_y = { "progress" },
+                lualine_y = {},
                 lualine_z = { "location" },
             },
         })
