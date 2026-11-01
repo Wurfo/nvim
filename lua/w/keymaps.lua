@@ -2,6 +2,7 @@ local map = vim.keymap.set
 
 -- Editing
 map("n", "x", '"_x', { desc = "Delete character" })
+map("n", "dd", '"_dd', { desc = "Delete line" })
 map("n", "J", "mzJ`z", { desc = "Join lines" })
 
 map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move lines down" })
