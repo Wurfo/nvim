@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+vim.g.maplocalleader = " "
 
 vim.filetype.add({
     extension = {
@@ -54,19 +54,10 @@ require("vim._core.ui2").enable({
             wmsg = "msg",
             typed_cmd = "cmd",
         },
-        cmd = {
-            height = 0.5,
-        },
-        dialog = {
-            height = 0.5,
-        },
-        msg = {
-            height = 0.3,
-            timeout = 5000,
-        },
-        pager = {
-            height = 0.5,
-        },
+        cmd = { height = 0.5 },
+        dialog = { height = 0.5 },
+        msg = { height = 0.3, timeout = 5000 },
+        pager = { height = 0.5 },
     },
 })
 
@@ -75,12 +66,12 @@ require("w.keymaps")
 -- require("w.autocmds")
 require("w.lazy")
 
--- vim.cmd([[colorscheme solarized-osaka]])
+vim.cmd([[colorscheme solarized-osaka]])
 -- vim.cmd([[colorscheme everforest]])
 -- vim.cmd([[colorscheme catppuccin-mocha]])
 -- vim.cmd([[colorscheme gruvbox-material]])
 -- vim.cmd([[colorscheme gruber-darker-renaissance]])
-vim.cmd([[colorscheme y9nika]])
+-- vim.cmd([[colorscheme y9nika]])
 -- vim.cmd.colorscheme("bark")
 
 vim.cmd(":hi statusline guibg=NONE") -- not sure about this

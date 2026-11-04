@@ -24,6 +24,7 @@ opt.smartindent = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.hlsearch = false
+opt.iskeyword:append("-")
 
 -- Windows
 opt.splitright = true
